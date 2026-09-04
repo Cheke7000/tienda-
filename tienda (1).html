@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda de Ropa</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>Los HDP Store</h1>
+
+    <button id="btn-ver-carrito" aria-label="Ver carrito">
+      🛒
+      <span id="contador-carrito">0</span>
+    </button>
+  </header>
+
+  <main>
+    <div class="lista-productos">
+
+      <!-- ============================= -->
+      <!-- PRODUCTO 1 -->
+      <!-- ============================= -->
+      <div class="producto" data-nombre="Camisa Azul" data-precio="15.00">
+        <div class="producto-imagen">
+          <img src="imagenes/camisa1.jpeg" alt="Camisa Azul">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Camisa Azul</h3>
+          <p class="producto-precio">$15.00</p>
+          <button class="btn-agregar">Comprar</button>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- PRODUCTO 2 -->
+      <!-- ============================= -->
+      <div class="producto" data-nombre="Pantalón Negro" data-precio="20.00">
+        <div class="producto-imagen">
+          <img src="imagenes/pantalon1.jpeg" alt="Pantalón Negro">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Pantalón Negro</h3>
+          <p class="producto-precio">$20.00</p>
+          <button class="btn-agregar">Comprar</button>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- PRODUCTO 3 -->
+      <!-- ============================= -->
+      <div class="producto" data-nombre="Pantalón Negro de vestir" data-precio="25.00">
+        <div class="producto-imagen">
+          <img src="imagenes/pantalon2.jpeg" alt="Vestido Rojo">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Pantalón Negro de vestir</h3>
+          <p class="producto-precio">$25.00</p>
+          <button class="btn-agregar">Comprar</button>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- PRODUCTO 4 -->
+      <!-- ============================= -->
+      <div class="producto" data-nombre="Chaqueta de Cuero" data-precio="45.00">
+        <div class="producto-imagen">
+          <img src="imagenes/chaqueta-cuero.jpg" alt="Chaqueta de Cuero">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Chaqueta de Cuero</h3>
+          <p class="producto-precio">$45.00</p>
+          <button class="btn-agregar">Comprar</button>
+        </div>
+      </div>
+
+      <!-- ============================= -->
+      <!-- PRODUCTO 5 -->
+      <!-- ============================= -->
+      <div class="producto" data-nombre="Gorra Blanca" data-precio="8.00">
+        <div class="producto-imagen">
+          <img src="imagenes/gorra-blanca.jpg" alt="Gorra Blanca">
+        </div>
+        <div class="producto-info">
+          <h3 class="producto-nombre">Gorra Blanca</h3>
+          <p class="producto-precio">$8.00</p>
+          <button class="btn-agregar">Comprar</button>
+        </div>
+      </div>
+
+      <!-- ============================================================ -->
+      <!-- Para agregar más productos: copia un bloque completo         -->
+      <!-- (desde <div class="producto" ...> hasta su </div> de cierre) -->
+      <!-- y cambia:                                                    -->
+      <!--   - data-nombre="..."   -> nombre del producto               -->
+      <!--   - data-precio="..."   -> precio del producto (solo número) -->
+      <!--   - src="..."           -> ruta de la imagen                 -->
+      <!--   - alt="..."           -> texto alternativo de la imagen    -->
+      <!--   - el texto dentro de <h3> y <p> (debe coincidir con arriba)-->
+      <!-- ============================================================ -->
+
+    </div>
+  </main>
+
+  <!-- Fondo oscuro detrás del panel del carrito -->
+  <div id="fondo-oscuro" class="oculto"></div>
+
+  <!-- Panel lateral del carrito -->
+  <aside id="panel-carrito" class="oculto">
+    <div class="carrito-header">
+      <h2>Tu Carrito</h2>
+      <button id="btn-cerrar-carrito" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <ul id="items-carrito">
+      <!-- Aquí JS insertará los productos agregados -->
+    </ul>
+
+    <div class="carrito-footer">
+      <p class="carrito-total">Total: $<span id="total-carrito">0.00</span></p>
+      <button id="btn-finalizar-compra">Finalizar compra por WhatsApp</button>
+    </div>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
